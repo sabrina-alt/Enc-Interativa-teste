@@ -10,12 +10,14 @@
           amet facilisis magna blandit et. Nunc elementum nisl eu quam scelerisque, in
           rhoncus lectus ultricies.
         </p>
-
-        <p>
+        <p style="height: 80px">
           Sed vel molestie lacus. Vivamus dolor tortor, bibendum nec est interdum,
           eleifend gravida sapien. Suspendisse euismod at tellus sed pulvinar
         </p>
-        <div>btn Features</div>
+        <div class="btn-features">
+          Features
+          <img src="@/assets/icon/arrow-top-right.svg" />
+        </div>
       </div>
     </article>
     <div class="dashboard-img-style">
@@ -34,12 +36,12 @@ section {
   overflow: hidden;
 }
 article {
-  padding: 90px 20px 70px 80px;
+  padding: 90px 0px 70px 80px;
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 628px;
-  height: 559px;
+  width: 45vw;
+  height: 50vh;
 }
 article span {
   color: $primary-color;
@@ -60,12 +62,12 @@ p {
   font-size: $font-size-base;
   font-weight: $font-weight-regular;
   width: 580px;
-  height: 154px;
+  height: 125px;
   padding: 0;
   margin: 0 auto;
 }
 .dashboard-img-style {
-  left: 220px;
+  left: 10vw;
   position: relative;
 }
 .dashboard-img-style img {
@@ -74,5 +76,16 @@ p {
   overflow: hidden;
   width: 1200px;
   height: 750px;
+}
+.btn-features {
+  display: flex;
+  gap: 0.5rem;
+  color: $secondary-darker-color;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semi-bold;
+}
+.btn-features img {
+  min-width: 20px;
+  max-width: 24px;
 }
 </style>

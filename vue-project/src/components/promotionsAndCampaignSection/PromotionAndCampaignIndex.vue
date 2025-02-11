@@ -78,120 +78,121 @@ export default {
 <style scoped lang="scss">
 section {
   display: flex;
-  position: relative;
-  justify-content: flex-start;
   flex-direction: column;
-  margin: auto;
   align-items: center;
-  row-gap: 20px;
   width: 100%;
-  padding-top: 50px;
+  padding: 5vh 5vw;
   background: linear-gradient(to bottom, white 60%, $background-color-dark 40%);
-  min-height: 140vh;
+  min-height: auto;
   font-family: $font-primary;
 }
-.main-container {
-  font: $font-primary;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  width: 886px;
-  height: 296px;
-  flex-direction: column;
-  padding-bottom: 50px;
-  gap: 16px;
-  position: relative;
-  top: 0px;
-}
-.main-container span {
+span {
   color: $primary-color;
-  font-weight: $font-weight-semi-bold;
   font-size: $font-size-base;
-  line-height: 20px;
-  line-height: 20.8px;
+  font-weight: $font-weight-semi-bold;
 }
+.main-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding-bottom: 50px;
+  gap: 1rem;
+}
+
 .main-container h2 {
+  color: $darker-font-color;
   font-size: $font-size-large;
   font-weight: $font-weight-regular;
   width: 886px;
-  height: 146px;
-  line-height: 73px;
-  max-width: 100%;
+  text-align: center;
+  line-height: 1.2;
 }
+
 .main-container article {
-  line-height: 22px;
   font-size: $font-size-base;
-  font-weight: $font-weight-regular;
   color: $lighter-font-color;
+  font-weight: $font-weight-regular;
   width: 618px;
   height: 44px;
 }
+
 .button-section {
-  padding-top: 10px;
-  width: 340px;
-  height: 45px;
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 10px;
 }
+
 .img-section {
   padding-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
+
 .img-section .img {
   width: 1061px;
   height: 611px;
   border-radius: 16px;
   overflow: hidden;
-}
-.img-section img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: top;
 }
+
 .partner-companies {
-  height: 41px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
 }
-.used-by-text {
-  margin-top: 30px;
-  color: $whiter-font-color;
-  font-size: $font-size-base;
-  font-weight: $font-weight-regular;
-}
+
 .partner-companies ul {
+  padding: 0;
   list-style: none;
-  padding: 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  justify-content: center; /* Centraliza os itens */
-  gap: 40px; /* Adiciona espaço entre os itens */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
 }
+
 .partner-companies ul li {
-  width: 160px;
-  height: 41px;
-  overflow: hidden;
+  width: auto;
+  max-width: 160px;
 }
+
 .list-item {
   display: flex;
   align-items: center;
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 0.5rem;
 }
-.name-company-img,
-.icon-img {
-  display: flex;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  align-items: center;
+.used-by-text {
+  color: $whiter-font-color;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .main-container {
+    max-width: 95%;
+  }
+  .main-container article {
+    max-width: 100%;
+  }
+  .main-container h2 {
+    max-width: 100%;
+  }
+  .button-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .partner-companies ul {
+    gap: 1rem;
+  }
 }
 </style>
