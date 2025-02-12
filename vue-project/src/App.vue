@@ -1,47 +1,31 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <HeaderIndex />
+    <PromotionAndCampaignIndex />
+    <FeaturesSection />
+    <FeaturesDashboardIndex />
+    <SecuritySectionIndex />
+  </div>
 </template>
-
+<script>
+import PromotionAndCampaignIndex from "./components/promotionsAndCampaignSection/PromotionAndCampaignIndex.vue";
+import HeaderIndex from "@/components/global/HeaderIndex.vue";
+import FeaturesSection from "@/components/featuresSection/FeaturesSection.vue";
+import FeaturesDashboardIndex from "@/components/featuresDashboardSection/FeaturesDashboardIndex.vue";
+import SecuritySectionIndex from "@/components/securitySection/SecuritySectionIndex.vue";
+export default {
+  components: {
+    HeaderIndex,
+    PromotionAndCampaignIndex,
+    FeaturesSection,
+    FeaturesDashboardIndex,
+    SecuritySectionIndex,
+  },
+};
+</script>
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+body {
+  margin: 0;
+  padding: 0;
 }
 </style>
