@@ -12,8 +12,11 @@ Teste técnico para empresa Enc Interativa.
 
 # Tecnologias usadas 
   vue.js 3
+  
   Sass
+  
   HTML
+  
   CSS
 
 # Interface
