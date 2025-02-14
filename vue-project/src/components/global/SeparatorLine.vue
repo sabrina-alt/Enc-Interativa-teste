@@ -3,6 +3,7 @@
     <hr class="separator" />
   </div>
 </template>
+<script></script>
 <style scoped lang="scss">
 .separator-section {
   display: flex;
