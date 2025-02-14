@@ -57,6 +57,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@import "@/assets/scss/utils.scss";
 section {
   display: flex;
   max-width: 100vw;
@@ -69,7 +70,7 @@ section {
   font-family: $font-primary;
 }
 .text-section {
-  width: 30vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,19 +79,20 @@ section {
 }
 .orange-text {
   padding-top: 10vh;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semi-bold;
-  color: $primary-color;
+  @extend .orange-text;
 }
 h2 {
   font-size: $font-size-medium;
   font-weight: $font-weight-regular;
   color: $whiter-font-color;
+  width: 80%;
   line-height: 56px;
 }
 .description-text {
   padding: 20px;
   line-height: 22px;
+  width: 75%;
+  color: $darker-shade-of-gray;
 }
 .img-section {
   display: flex;

@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/utils.scss";
 section {
   display: flex;
   flex-direction: column;
@@ -87,9 +88,7 @@ section {
   font-family: $font-primary;
 }
 span {
-  color: $primary-color;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semi-bold;
+  @extend .orange-text;
 }
 .main-container {
   text-align: center;

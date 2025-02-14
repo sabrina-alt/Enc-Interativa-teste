@@ -14,10 +14,7 @@
           Sed vel molestie lacus. Vivamus dolor tortor, bibendum nec est interdum,
           eleifend gravida sapien. Suspendisse euismod at tellus sed pulvinar
         </p>
-        <div class="btn-features">
-          Features
-          <img src="@/assets/icon/arrow-top-right.svg" />
-        </div>
+        <ButtonFeatures />
       </div>
     </article>
     <div class="dashboard-img-style">
@@ -25,7 +22,16 @@
     </div>
   </section>
 </template>
+<script>
+import ButtonFeatures from "@/components/global/ButtonFeatures.vue";
+export default {
+  components: {
+    ButtonFeatures,
+  },
+};
+</script>
 <style lang="scss" scoped>
+@import "@/assets/scss/utils.scss";
 section {
   width: 100%;
   margin: 0 auto;
@@ -40,13 +46,11 @@ article {
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 45vw;
+  width: 65vw;
   height: 50vh;
 }
 article span {
-  color: $primary-color;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semi-bold;
+  @extend .orange-text;
   width: 580px;
   height: 21px;
 }
@@ -76,16 +80,5 @@ p {
   overflow: hidden;
   width: 1200px;
   height: 750px;
-}
-.btn-features {
-  display: flex;
-  gap: 0.5rem;
-  color: $secondary-darker-color;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semi-bold;
-}
-.btn-features img {
-  min-width: 20px;
-  max-width: 24px;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <section>
-    <div>
-      <img />
+    <div class="img-style">
+      <img src="@/assets/icon/Group.svg" />
     </div>
     <article>
-      <span>SEGURANÇA</span>
+      <span class="small-title">SEGURANÇA</span>
       <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
       <div>
         <p>
@@ -19,9 +19,56 @@
         </p>
       </div>
       <div>
-        <span>Features</span>
-        <img />
+        <ButtonFeatures />
       </div>
     </article>
   </section>
 </template>
+<script>
+import ButtonFeatures from "@/components/global/ButtonFeatures.vue";
+export default {
+  components: {
+    ButtonFeatures,
+  },
+};
+</script>
+<style scoped lang="scss">
+@import "@/assets/scss/utils.scss";
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 559px;
+}
+.small-title {
+  @extend .orange-text;
+}
+section h2 {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+  max-width: 580px;
+  max-height: 116px;
+  line-height: 57px;
+  margin: 20px 0 20px 0;
+}
+.img-style {
+  min-width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article {
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+p {
+  max-width: 580px;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: 22px;
+  color: $lighter-font-color;
+  padding-bottom: 20px;
+}
+</style>

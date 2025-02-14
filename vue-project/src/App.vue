@@ -5,6 +5,7 @@
     <FeaturesSection />
     <FeaturesDashboardIndex />
     <SecuritySectionIndex />
+    <PlansAndPricesIndex />
   </div>
 </template>
 <script>
@@ -13,6 +14,8 @@ import HeaderIndex from "@/components/global/HeaderIndex.vue";
 import FeaturesSection from "@/components/featuresSection/FeaturesSection.vue";
 import FeaturesDashboardIndex from "@/components/featuresDashboardSection/FeaturesDashboardIndex.vue";
 import SecuritySectionIndex from "@/components/securitySection/SecuritySectionIndex.vue";
+import PlansAndPricesIndex from "@/components/plansAndPricesSection/PlansAndPricesIndex.vue";
+
 export default {
   components: {
     HeaderIndex,
@@ -20,6 +23,7 @@ export default {
     FeaturesSection,
     FeaturesDashboardIndex,
     SecuritySectionIndex,
+    PlansAndPricesIndex,
   },
 };
 </script>

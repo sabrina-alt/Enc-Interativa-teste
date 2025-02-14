@@ -1,0 +1,19 @@
+.orange-text {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semi-bold;
+    color: $primary-color;
+  }
+  
+.card-plans {
+    background-color: $card-color;
+    border: 1px solid $card-border-color;
+}
+.main-title {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-regular;
+}
+.default-button {
+    padding: 12px 24px 12px 24px;
+    border-radius: 8px;
+    font-weight: $font-weight-semi-bold;
+}
