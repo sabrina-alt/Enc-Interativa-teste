@@ -22,18 +22,13 @@ ps: Não encontrei a font Nohemi para dowmload. Procurei em Font Squirrel, DaFon
 
 # Interface
 
-
-<img width="1440" alt="Captura de Tela 2025-02-12 às 17 11 31" src="https://github.com/user-attachments/assets/2bce6804-e76a-4ffc-9278-f860ddc7671c" />
-
-
-<img width="1440" alt="Captura de Tela 2025-02-12 às 17 11 43" src="https://github.com/user-attachments/assets/430bb778-4fef-4926-8813-4dbd4f0b3660" />
-
-
-<img width="1440" alt="Captura de Tela 2025-02-12 às 17 11 51" src="https://github.com/user-attachments/assets/50f9594b-56bf-4cbd-859e-52f30af19725" />
-
-<img width="1440" alt="Captura de Tela 2025-02-12 às 17 11 58" src="https://github.com/user-attachments/assets/7f374622-9a98-4c36-9c5b-d379da757ec0" />
-
-<img width="1440" alt="Captura de Tela 2025-02-12 às 17 12 05" src="https://github.com/user-attachments/assets/4f42f55a-aa70-44dc-8e4a-2aa3200ff52d" />
+Replicando a interface: 
 
 
 
+
+<img width="1440" alt="Captura de Tela 2025-02-15 às 10 25 53" src="https://github.com/user-attachments/assets/14d8c4ae-1c91-458d-9730-f2f2b552c1a1" />
+<img width="1440" alt="Captura de Tela 2025-02-15 às 10 26 06" src="https://github.com/user-attachments/assets/076d8a7b-8e2c-4e6b-9770-5e617713695f" />
+<img width="1440" alt="Captura de Tela 2025-02-15 às 10 26 18" src="https://github.com/user-attachments/assets/4abc5654-ae3d-4301-90f4-9d3107c95d12" />
+<img width="1440" alt="Captura de Tela 2025-02-15 às 10 26 29" src="https://github.com/user-attachments/assets/f56d2fee-9943-4b33-a49d-f54b368ecd5d" />
+<img width="1440" alt="Captura de Tela 2025-02-15 às 10 26 44" src="https://github.com/user-attachments/assets/fcb200a9-cc87-411e-8744-56290b3b84a9" />
