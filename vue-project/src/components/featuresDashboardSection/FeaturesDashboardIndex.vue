@@ -25,6 +25,7 @@
     </div>
   </section>
 </template>
+
 <script>
 export default {
   data() {
@@ -56,7 +57,10 @@ export default {
   },
 };
 </script>
+
 <style scoped lang="scss">
+@import "@/assets/scss/utils.scss";
+
 section {
   display: flex;
   max-width: 100vw;
@@ -68,30 +72,36 @@ section {
   background-color: $background-color-dark;
   font-family: $font-primary;
 }
+
 .text-section {
-  width: 30vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
   text-align: center;
 }
+
 .orange-text {
   padding-top: 10vh;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semi-bold;
-  color: $primary-color;
+  @extend .orange-text;
 }
+
 h2 {
   font-size: $font-size-medium;
   font-weight: $font-weight-regular;
   color: $whiter-font-color;
+  width: 80%;
   line-height: 56px;
 }
+
 .description-text {
   padding: 20px;
   line-height: 22px;
+  width: 75%;
+  color: $darker-shade-of-gray;
 }
+
 .img-section {
   display: flex;
   justify-content: center;
@@ -109,12 +119,15 @@ h2 {
   object-fit: cover;
   object-position: top;
 }
+
 .menu-options-section {
   padding: 10px 0 20px 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 8px;
 }
+
 .menu-options-section ul {
   width: 70vw;
   list-style: none;
@@ -122,6 +135,7 @@ h2 {
   justify-content: center;
   gap: 8px;
 }
+
 .menu-options-section li {
   display: flex;
   align-items: center;
@@ -135,11 +149,39 @@ h2 {
   font-size: $font-size-base;
   font-weight: $font-weight-plus;
 }
+
 .orange-button {
   color: $whiter-font-color;
   background-color: $primary-color;
 }
+
 .regular-button {
   color: $ligher-shade-of-gray;
+}
+
+/* Adicionando media query para telas pequenas (mobile) */
+@media (max-width: 768px) {
+  .text-section {
+    width: 80vw;
+  }
+  .menu-options-section {
+    overflow: hidden;
+  }
+  section {
+    padding-bottom: 50px;
+  }
+  .img-section img {
+    margin: 0 auto;
+    width: 327px;
+    height: 197;
+  }
+  .text-section {
+    width: 100%;
+  }
+  .description-text {
+    width: 327px;
+    height: 66px;
+    margin-bottom: 25px;
+  }
 }
 </style>

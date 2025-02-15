@@ -15,8 +15,7 @@
           eleifend gravida sapien. Suspendisse euismod at tellus sed pulvinar
         </p>
         <div class="btn-features">
-          Features
-          <img src="@/assets/icon/arrow-top-right.svg" />
+          <ButtonFeatures />
         </div>
       </div>
     </article>
@@ -25,7 +24,17 @@
     </div>
   </section>
 </template>
+<script>
+import ButtonFeatures from "@/components/global/ButtonFeatures.vue";
+export default {
+  components: {
+    ButtonFeatures,
+  },
+};
+</script>
 <style lang="scss" scoped>
+@import "@/assets/scss/utils.scss";
+
 section {
   width: 100%;
   margin: 0 auto;
@@ -35,21 +44,22 @@ section {
   padding: 70px 20px 70px 50px;
   overflow: hidden;
 }
+
 article {
   padding: 90px 0px 70px 80px;
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 45vw;
+  width: 65vw;
   height: 50vh;
 }
+
 article span {
-  color: $primary-color;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semi-bold;
+  @extend .orange-text;
   width: 580px;
   height: 21px;
 }
+
 article h2 {
   font-size: $font-size-medium;
   font-weight: $font-weight-regular;
@@ -57,6 +67,7 @@ article h2 {
   width: 580px;
   height: 153px;
 }
+
 p {
   color: $lighter-font-color;
   font-size: $font-size-base;
@@ -66,10 +77,12 @@ p {
   padding: 0;
   margin: 0 auto;
 }
+
 .dashboard-img-style {
   left: 10vw;
   position: relative;
 }
+
 .dashboard-img-style img {
   object-fit: cover;
   object-position: left;
@@ -77,15 +90,41 @@ p {
   width: 1200px;
   height: 750px;
 }
-.btn-features {
-  display: flex;
-  gap: 0.5rem;
-  color: $secondary-darker-color;
-  font-size: $font-size-base;
-  font-weight: $font-weight-semi-bold;
-}
-.btn-features img {
-  min-width: 20px;
-  max-width: 24px;
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  article {
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+    height: auto;
+  }
+
+  article h2,
+  article p,
+  article span {
+    width: 100%;
+    height: auto;
+  }
+
+  .dashboard-img-style {
+    left: 0;
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dashboard-img-style img {
+    width: 341px;
+    height: 238.48px;
+  }
+  .btn-features {
+    padding-top: 25px;
+  }
 }
 </style>
