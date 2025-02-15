@@ -1,6 +1,6 @@
 # Enc-Interativa-teste
 Teste técnico para empresa Enc Interativa.
-ps: Não encontrei a font Nohemi para dowmload. Procurei em Font Squirrel, DaFont, MyFonts e GoogleFonts
+ps: Não encontrei a font Nohemi para download. Procurei em Font Squirrel, DaFont, MyFonts e GoogleFonts
 
 # Como baixar e executar o projeto?
   git clone https://github.com/sabrina-alt/Enc-Interativa-teste.git
