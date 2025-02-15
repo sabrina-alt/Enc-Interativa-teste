@@ -71,4 +71,12 @@ export default {
 .color-button-grey {
   background: $color-button-grey;
 }
+@media (max-width: 768px) {
+  .size-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+  }
+}
 </style>

@@ -8,20 +8,18 @@
         at tellus consequat hendrerit. Pellentesque porta ullamcorper nisl,
       </article>
       <div class="button-section">
-        <div>
-          <ButtonSmall
-            :color="'whiter-font-color'"
-            :background="'primary-color'"
-            :text="'Fale conosco'"
-          />
-        </div>
-        <div>
-          <ButtonSmall
-            :color="'darker-font-color'"
-            :background="'color-border-button'"
-            :text="'Planos e Preços'"
-          />
-        </div>
+        <ButtonSmall
+          class="responsive-button"
+          :color="'whiter-font-color'"
+          :background="'primary-color'"
+          :text="'Fale conosco'"
+        />
+        <ButtonSmall
+          class="responsive-button"
+          :color="'darker-font-color'"
+          :background="'color-border-button'"
+          :text="'Planos e Preços'"
+        />
       </div>
     </div>
     <div class="img-section">
@@ -29,19 +27,19 @@
     </div>
     <div class="partner-companies">
       <div class="used-by-text">Usado por grandes empresas do Brasil:</div>
-      <ul>
+      <ul class="company-list">
         <li class="list-item" v-for="(item, index) in companyList" :key="index">
-          <div>
-            <img class="icon-img" :src="item.iconPath" />
-          </div>
+          <img class="icon-img" :src="item.iconPath" />
           <img class="name-company-img" :src="item.companyNamePath" />
         </li>
       </ul>
     </div>
   </section>
 </template>
+
 <script>
 import ButtonSmall from "@/components/global/ButtonSmall.vue";
+
 export default {
   components: {
     ButtonSmall,
@@ -77,6 +75,7 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/scss/utils.scss";
+
 section {
   display: flex;
   flex-direction: column;
@@ -84,12 +83,13 @@ section {
   width: 100%;
   padding: 5vh 5vw;
   background: linear-gradient(to bottom, white 60%, $background-color-dark 40%);
-  min-height: auto;
   font-family: $font-primary;
 }
+
 span {
   @extend .orange-text;
 }
+
 .main-container {
   text-align: center;
   display: flex;
@@ -104,7 +104,7 @@ span {
   color: $darker-font-color;
   font-size: $font-size-large;
   font-weight: $font-weight-regular;
-  width: 886px;
+  max-width: 886px;
   text-align: center;
   line-height: 1.2;
 }
@@ -113,16 +113,30 @@ span {
   font-size: $font-size-base;
   color: $lighter-font-color;
   font-weight: $font-weight-regular;
-  width: 618px;
-  height: 44px;
+  max-width: 618px;
 }
 
 .button-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  gap: 1rem;
-  padding-top: 10px;
+  width: 100%;
+}
+
+.responsive-button {
+  padding: 10px 10px;
+}
+
+@media (max-width: 768px) {
+  .button-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .responsive-button {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 .img-section {
@@ -134,14 +148,13 @@ span {
 }
 
 .img-section .img {
-  width: 1061px;
+  width: 1021px;
   height: 611px;
   border-radius: 16px;
   overflow: hidden;
   object-fit: cover;
   object-position: top;
 }
-
 .partner-companies {
   display: flex;
   flex-direction: column;
@@ -149,49 +162,60 @@ span {
   text-align: center;
   padding: 2rem 0;
   width: 100%;
+  overflow: hidden;
 }
 
-.partner-companies ul {
-  padding: 0;
-  list-style: none;
+.company-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  padding: 10px 0;
 }
 
-.partner-companies ul li {
-  width: auto;
-  max-width: 160px;
+.company-list::-webkit-scrollbar {
+  display: none;
 }
 
 .list-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  max-width: 160px;
 }
+
 .used-by-text {
   color: $whiter-font-color;
   font-size: $font-size-base;
   font-weight: $font-weight-regular;
   margin-bottom: 1rem;
 }
+
 @media (max-width: 768px) {
   .main-container {
     max-width: 95%;
   }
+
   .main-container article {
     max-width: 100%;
   }
+
   .main-container h2 {
     max-width: 100%;
+    line-height: 50.2px;
+    text-align: center;
+    padding-bottom: 30px;
   }
-  .button-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .partner-companies ul {
+
+  .company-list {
+    justify-content: flex-start;
     gap: 1rem;
+  }
+  .img-section .img {
+    width: 341px;
+    height: 238.48px;
   }
 }
 </style>

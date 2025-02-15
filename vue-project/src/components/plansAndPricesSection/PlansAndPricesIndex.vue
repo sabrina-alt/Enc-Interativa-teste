@@ -62,6 +62,7 @@
     </div>
   </section>
 </template>
+
 <script>
 import CardContentList from "@/components/plansAndPricesSection/CardContentList.vue";
 import TitleCard from "@/components/plansAndPricesSection/TitleCard.vue";
@@ -77,8 +78,10 @@ export default {
   },
 };
 </script>
+
 <style scoped lang="scss">
 @import "@/assets/scss/utils.scss";
+
 section {
   padding: 50px;
   display: flex;
@@ -87,12 +90,14 @@ section {
   flex-direction: column;
   background-color: $background-color-light;
 }
+
 .section-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .btn-section {
   display: flex;
   flex-direction: column;
@@ -100,40 +105,74 @@ section {
   align-content: center;
   align-items: center;
 }
+
 .orange-text {
   @extend .orange-text;
 }
+
 h2 {
   @extend .main-title;
   color: $whiter-font-color;
 }
+
 .cards-style {
   display: flex;
-  justify-content: center;
-  justify-items: center;
+  justify-content: space-between;
+  gap: 0;
   align-items: center;
 }
-.individual-card-last {
-  @extend .card-plans;
-  width: 321px;
-  height: 522px;
-  border-radius: 0 16px 16px 0;
-}
-.individual-card-first {
-  @extend .card-plans;
-  width: 321px;
-  height: 522px;
-  border-radius: 16px 0 0 16px;
-}
-.individual-card-center .btn-section {
-  margin-top: 30px;
-}
+
+.individual-card-last,
+.individual-card-first,
 .individual-card-center {
   @extend .card-plans;
   width: 321px;
-  height: 570px;
-  margin-bottom: 15px;
+  height: 522px;
   border-radius: 16px;
+}
+
+.individual-card-center {
+  height: 570px;
   padding-top: 10px;
+}
+
+.individual-card-first {
+  border-radius: 16px 0 0 16px;
+}
+
+.individual-card-last {
+  border-radius: 0 16px 16px 0;
+}
+
+.individual-card-center .btn-section {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .cards-style {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .individual-card-first,
+  .individual-card-center,
+  .individual-card-last {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .section-title h2 {
+    text-align: center;
+    line-height: 57px;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  .individual-card-last,
+  .individual-card-first,
+  .individual-card-center {
+    padding-bottom: 25px;
+  }
 }
 </style>
