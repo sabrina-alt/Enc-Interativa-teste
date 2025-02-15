@@ -2,7 +2,7 @@
 Teste técnico para empresa Enc Interativa.
 
 # Como baixar e executar o projeto?
-  git clone 
+  git clone https://github.com/sabrina-alt/Enc-Interativa-teste.git
   
   cd vue-project
   
